@@ -1742,7 +1742,7 @@ class LocalClient(object):
 
             for word in tgt:
                 if word.startswith("N@") and len(word) > 2:
-                    resolved = self._resolve_nodegroup(word[2:])
+                    resolved = " ( " + self._resolve_nodegroup(word[2:]) + " ) "
                     new_tgt.extend(resolved)
                 else:
                     new_tgt.append(word)
